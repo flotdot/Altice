@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+    quarkus:
+        container_name: altice
+        image: alticebe
+        build:
+            context: ./alticeBE
+            dockerfile: ./src/main/docker/Dockerfile.jvm
+        env_file: ./alticeBE/.env
+        ports:
+            - 8088:8080
